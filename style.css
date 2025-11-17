@@ -1,0 +1,71 @@
+/* Basic structure of the clock */
+.clock {
+  width: 90vmin;        
+  max-width: 400px;     /* max. size */
+  aspect-ratio: 1;      
+  margin: 50px auto;
+  position: relative;
+}
+
+/* clock-face */
+.outer-clock-face {
+  width: 100%;
+  height: 100%;
+  border: 0.5em solid #333; 
+  border-radius: 50%;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Minute and hour markers */
+.marking {
+  position: absolute;
+  background: #333;
+}
+
+.marking-one { width: 0.1em; height: 20%; top: 0; left: 50%; transform: translateX(-50%); }
+.marking-two { width: 0.1em; height: 20%; bottom: 0; left: 50%; transform: translateX(-50%); }
+.marking-three { width: 20%; height: 0.1em; top: 50%; left: 0; transform: translateY(-50%); }
+.marking-four { width: 20%; height: 0.1em; top: 50%; right: 0; transform: translateY(-50%); }
+
+/* clock-face */
+.inner-clock-face {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  position: relative;
+}
+
+/* pointer */
+.hand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center; 
+  transform: translate(-50%, -100%) rotate(0deg);
+  border-radius: 0.2em;
+}
+
+/* hour hand */
+.hour-hand {
+  width: 0.3em;   /* skaliert mit Uhrgrösse */
+  height: 25%;
+  background: #333;
+}
+
+/* minute hand */
+.min-hand {
+  width: 0.2em;
+  height: 35%;
+  background: #666;
+}
+
+/* second hand */
+.second-hand {
+  width: 0.1em;
+  height: 40%;
+  background: red;
+}
